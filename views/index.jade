@@ -1,0 +1,27 @@
+extends layout
+
+block head
+  meta(charset='utf-8')
+  title= title
+  link(rel='stylesheet', href='/css/style.css')
+  block scripts
+    script(type='text/javascript', src="/js/index.js")
+block content
+  h1 MIDIコントローラ
+    br
+    form#submit_form(method="POST", target="/api/channel/voice/program/change.json")
+      select#programs
+        each program, i in programChange
+          option(value=i+1) #{programChange[i]}
+
+  //- 
+   ul#programs
+     - for(var i=0; i < programChange.length; ++i){
+        li= programChange[i] 
+        //- 
+          form(method="POST", target="/channel/voice/program/change.json")
+               input(type="text", name="number" value="#{i}")
+               input(type="hidden", name="mode" value="input")
+               input(type="submit", value="送信")
+     - }
+
