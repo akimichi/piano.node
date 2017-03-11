@@ -2,6 +2,13 @@
   "name": "piano.node",
   "version": "0.0.1",
   "description": "MIDI keyboard player",
+  "engines": {
+    "node": ">= 7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://akimichi.homeunix.net/gitbucket/git/emile/piano.node.git"
+  },
   "main": "index.js",
   "dependencies": {
     "async": "2.1.4",
@@ -17,15 +24,14 @@
     "supertest": "2.0.1"
   },
   "devDependencies": {
-    "expect.js": "0.3.1"
+    "eslint": "3.17.1",
+    "expect.js": "0.3.1",
+    "supertest": "2.0.1"
   },
   "scripts": {
     "test": "mocha spec",
+    "lint": "eslint app.js models routes spec",
     "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://akimichi.homeunix.net/gitbucket/git/emile/piano.node.git"
   },
   "keywords": [
     "MIDI"

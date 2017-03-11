@@ -11,8 +11,6 @@ $ nvm use
 $ npm install
 ~~~
 
-
-
 ~~~
 sudo apt-get install fluidsynth
 sudo apt-get install fluid-soundfont-gm
@@ -21,8 +19,6 @@ fluidsynth --audio-driver=alsa --gain 3 /usr/share/sounds/sf2/FluidR3_GM.sf2
 fluidsynth --server --audio-driver=alsa -o audio.alsa.device=hw:1 --sample-rate=48000 --gain=0.1 --audio-bufsize=256 --audio-bufcount=32 /usr/share/sounds/sf2/FluidR3_GM.sf2
 fluidsynth -i -s -a alsa -o audio.alsa.device=hw:1,0 -m alsa_seq /usr/share/sounds/sf2/FluidR3_GM.sf2 -g 1
 ~~~
-
-
 
 
 ~~~
