@@ -16,16 +16,12 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 
 // POSTでdataを受け取るための記述
-// app.use(bodyParser.urlencoded({
-//   extended: true
-// }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // ルーティング登録
 const api = require('./routes/api');
 app.use('/api', api);
-
 
 app.get('/', function (req, res) {
   console.log('GET /');

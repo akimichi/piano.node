@@ -35,11 +35,11 @@ router.post('/channel/voice/note/on.json', (req, res) => {
 router.post('/channel/voice/note/off', (req, res) => {
   res.send('channel message');
 });
+// Program Change 
 router.post('/channel/voice/program/change', (req, res) => {
   console.log('/channel/voice/program/change');
-  // console.log(req);
   console.log(req.body);
-  // midi.program_change(1,req.body.number);
+  // midi.program_change(1,req.body.program_number);
   res.redirect('/');
 });
 router.post('/channel/voice/control', (req, res) => {

@@ -9,24 +9,9 @@ block head
 block content
   h1 MIDIコントローラ
     br
-    //- 
-      form#submit_form(method="POST", action="/api/channel/voice/program/change")
-        select#programs(onchange="submit(this.form)")
-          each program, i in programChange
-            option(value=i+1) #{programChange[i]}
     form#submit_form(method="POST", action="/api/channel/voice/program/change")
       select#programs
         each program, i in programChange
           option(value=i+1) #{programChange[i]}
 
-  //- 
-   ul#programs
-     - for(var i=0; i < programChange.length; ++i){
-        li= programChange[i] 
-        //- 
-          form(method="POST", target="/channel/voice/program/change.json")
-               input(type="text", name="number" value="#{i}")
-               input(type="hidden", name="mode" value="input")
-               input(type="submit", value="送信")
-     - }
 
