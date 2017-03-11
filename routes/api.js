@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const midi = require('../models/midi.js');
+const midi = require('../lib/midi.js');
 
 // define the home page route
 router.get('/', (req, res) => {
