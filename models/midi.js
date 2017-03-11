@@ -1,3 +1,5 @@
+const IO = require('../lib/io.js');
+
 const midi = require('midi');
 const input = new midi.input();
 // input.openPort(1);
@@ -25,7 +27,9 @@ output.openPort(2);
 const MIDI = {
   note_on: (channel, note, velocity) => {
     // [status, data1, data2]
-    output.sendMessage([144,60,64]);
+    return  
+    output.sendMessage([channel, node, velocity]);
+    // output.sendMessage([144,60,64]);
     // output.sendMessage([128,60,64]);
   },
   note_off: (channel, note) => {
