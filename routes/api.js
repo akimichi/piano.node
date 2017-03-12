@@ -50,6 +50,13 @@ router.post('/channel/voice/pitch', (req, res) => {
   IO.run(MIDI.pitch_bend(1,req.body.pitch_value));
   res.redirect('/');
 });
+// Modulation Depth
+router.post('/channel/voice/modulation', (req, res) => {
+  console.log('/channel/voice/modulation');
+  console.log(req.body);
+  IO.run(MIDI.modulation_depth(1,req.body.modulation_value));
+  res.redirect('/');
+});
 router.post('/channel/voice/control', (req, res) => {
   res.send('channel message');
 });
