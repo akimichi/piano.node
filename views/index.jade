@@ -4,14 +4,16 @@ block head
   meta(charset='utf-8')
   title= title
   link(rel='stylesheet', href='/css/style.css')
+  link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
   block scripts
     script(type='text/javascript', src="/js/index.js")
 block content
-  h1 MIDIコントローラ
+  h2 音色 
     br
     form#submit_form(method="POST", action="/api/channel/voice/program/change")
       select#programs
         each program, i in programChange
           option(value=i+1) #{programChange[i]}
-
+  h2 ピッチ 
+    #slider-vertical
 

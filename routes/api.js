@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const midi = require('../lib/midi.js');
+const MIDI = require('../lib/midi.js');
+const IO = require('../lib/io.js');
 
 // define the home page route
 router.get('/', (req, res) => {
@@ -29,7 +30,7 @@ router.get('/channel/voice/note/on', (req, res) => {
 });
 router.post('/channel/voice/note/on.json', (req, res) => {
   console.log(req.body);
-  midi.note_on(1,1,1);
+  MIDI.note_on(1,1,1);
   res.json(req.body);
 });
 router.post('/channel/voice/note/off', (req, res) => {
@@ -39,7 +40,14 @@ router.post('/channel/voice/note/off', (req, res) => {
 router.post('/channel/voice/program/change', (req, res) => {
   console.log('/channel/voice/program/change');
   console.log(req.body);
-  // midi.program_change(1,req.body.program_number);
+  IO.run(MIDI.program_change(1,req.body.program_number));
+  res.redirect('/');
+});
+// Pitch Bend
+router.post('/channel/voice/pitch', (req, res) => {
+  console.log('/channel/voice/pitch');
+  console.log(req.body);
+  IO.run(MIDI.pitch_bend(1,req.body.pitch_value));
   res.redirect('/');
 });
 router.post('/channel/voice/control', (req, res) => {
