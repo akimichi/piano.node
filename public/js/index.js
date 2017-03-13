@@ -12,27 +12,48 @@ $(function(){
         }
       });
     });
-    $("#slider-vertical").slider({
+    $("#slider-vertical-pitch").slider({
       orientation: "vertical",
       range: "min",
       min: 0,
       max: 127,
-      value: 66,
+      value: 64,
       slide: function( event, ui ) {
-        $("#amount").val( ui.value );
+        $("#amount-pitch").val( ui.value );
         $.ajax({
           type: 'POST',
           data: JSON.stringify({pitch_value: ui.value}),
           contentType: 'application/json',
           url: '/api/channel/voice/pitch',						
-          success: function(data) {
-            console.log('success');
-            console.log(JSON.stringify(data));
-          }
+          // success: function(data) {
+          //   console.log('success');
+          //   console.log(JSON.stringify(data));
+          // }
         });
       }
     });
-    $("#amount").val($("#slider-vertical").slider( "value" ) );
+    $("#amount-pitch").val($("#slider-vertical-pitch").slider("value"));
+    $("#slider-vertical-modulation").slider({
+      orientation: "vertical",
+      range: "min",
+      min: 0,
+      max: 127,
+      value: 0,
+      slide: function( event, ui ) {
+        $("#amount-modulation").val( ui.value );
+        $.ajax({
+          type: 'POST',
+          data: JSON.stringify({modulation_value: ui.value}),
+          contentType: 'application/json',
+          url: '/api/channel/voice/modulation',						
+          // success: function(data) {
+          //   console.log('success');
+          //   console.log(JSON.stringify(data));
+          // }
+        });
+      }
+    });
+    $("#amount-modulation").val($("#slider-vertical-modulation").slider("value"));
   })
   // POSTアクセスする
   // $.post('/api/channel/voice/program/change.json', {number: 6}, function(res){

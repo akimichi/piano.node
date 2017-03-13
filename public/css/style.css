@@ -8,6 +8,10 @@ a {
 }
 
 
-#slider-vertical {
+#slider-vertical-pitch {
+  height:200px;
+}
+
+#slider-vertical-modulation {
   height:200px;
 }
