@@ -1,5 +1,5 @@
 $(function(){
-  $(function(){
+  // $(function(){
     $("#programs").change(function(){
       $.ajax({
         type: 'POST',
@@ -12,6 +12,7 @@ $(function(){
         }
       });
     });
+    // ピッチベンド
     $("#slider-vertical-pitch").slider({
       orientation: "vertical",
       range: "min",
@@ -33,6 +34,7 @@ $(function(){
       }
     });
     $("#amount-pitch").val($("#slider-vertical-pitch").slider("value"));
+    // モジュレーション
     $("#slider-vertical-modulation").slider({
       orientation: "vertical",
       range: "min",
@@ -54,9 +56,11 @@ $(function(){
       }
     });
     $("#amount-modulation").val($("#slider-vertical-modulation").slider("value"));
-  })
-  // POSTアクセスする
-  // $.post('/api/channel/voice/program/change.json', {number: 6}, function(res){
-  //   console.log(res);
-  // });
+  // })
 });
+
+// デバッグ
+// var socket = io();
+// socket.on('message', function(data){
+//   $('#message').text(data.message));
+// });

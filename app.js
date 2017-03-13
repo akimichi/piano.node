@@ -1,6 +1,9 @@
 
 const express = require('express');
 const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
 const flash = require('connect-flash');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
@@ -8,6 +11,8 @@ const errorHandler = require('errorhandler');
 const config = require('config');
 const morgan = require('morgan');
 const programChangeConfig = config.get('Program Change');
+
+const MIDI = require('./lib/midi.js');
 
 // view setting
 app.set('view engine', 'jade');
@@ -31,7 +36,21 @@ app.get('/', function (req, res) {
   });
 });
 
+io.on('connection', (socket) => {
+  // io.emit('message', {"message": "connection", "deltaTime": 0});
+  // MIDI INの信号を拾ったら実行する
+  MIDI.input.on('message', (deltaTime, message) => {
+    io.emit('message', {"message": message, "deltaTime": deltaTime});
+    // console.log('m:' + message + ' d:' + deltaTime);
+    // Send a MIDI message.
+    // output.sendMessage([176,22,1]);
+    // output.sendMessage(message);
+  }); 
+});
+
 // 3000番を指定
 const port = process.env.PORT || 3000;
-app.listen(port);
+// const port = process.env.PORT || 8080;
+http.listen(port);
+// app.listen(port);
 
