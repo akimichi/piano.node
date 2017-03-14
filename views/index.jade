@@ -5,9 +5,10 @@ block head
   title= title
   link(rel='stylesheet', href='/css/style.css')
   block scripts
-    script(type='text/javascript', src='/js/jquery-3.1.1.js')
-    script(type='text/javascript', src='/js/jquery-ui.js')
-    script(type='text/javascript', src="/js/index.js")
+    script(src='/js/jquery-3.1.1.js')
+    script(src='/js/jquery-ui.js')
+    script(src="/js/index.js")
+    script(src="/js/visualizer.js")
 block content
   h2 音色 
     br
@@ -20,6 +21,26 @@ block content
 
   h2 モジュレーション 
     #slider-vertical-modulation
+
+  svg#equalizer
+
+  svg#keyboard
+    // white keys 
+    - var white_i = 0;
+    - while(white_i < 2921) {
+      rect(x="#{white_i}" y="0" class="white-key")
+      - white_i = white_i + 23;
+    - }
+    // black keys
+    - var black_i = 0;
+    - while(black_i < 2800) {
+      rect(x="#{14.33333+black_i}" y="0" class="black-key")
+      rect(x="#{41.66666+black_i}" y="0" class="black-key" )
+      rect(x="#{82.25+black_i}"    y="0" class="black-key")
+      rect(x="#{108.25+black_i}"   y="0" class="black-key")
+      rect(x="#{134.75+black_i}"   y="0" class="black-key")
+      - black_i = black_i + 161;
+    - }
 
   h2 デバッグメッセージ
     #message

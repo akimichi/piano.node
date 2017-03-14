@@ -15,3 +15,25 @@ a {
 #slider-vertical-modulation {
   height:200px;
 }
+
+
+svg#equalizer {
+  height:150px;
+  width:3000px;
+}
+svg#keyboard {
+  height:150px;
+  width:3000px;
+}
+.white-key {
+  fill:white;
+  stroke:black;
+  width:23px;
+  height:120px;
+}
+.black-key {
+  fill:black;
+  stroke:black;
+  width:13px;
+  height:80px;
+}
