@@ -26,20 +26,16 @@ block content
 
   svg#keyboard
     // white keys 
-    - var white_i = 0;
-    - while(white_i < 2921) {
+    - for(white_i = 0; white_i < 2921; white_i = white_i + 23) {
       rect(x="#{white_i}" y="0" class="white-key")
-      - white_i = white_i + 23;
     - }
     // black keys
-    - var black_i = 0;
-    - while(black_i < 2800) {
+    - for(black_i = 0; black_i < 2800; black_i = black_i + 161) {
       rect(x="#{14.33333+black_i}" y="0" class="black-key")
       rect(x="#{41.66666+black_i}" y="0" class="black-key" )
       rect(x="#{82.25+black_i}"    y="0" class="black-key")
       rect(x="#{108.25+black_i}"   y="0" class="black-key")
       rect(x="#{134.75+black_i}"   y="0" class="black-key")
-      - black_i = black_i + 161;
     - }
 
   h2 デバッグメッセージ
