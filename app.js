@@ -37,7 +37,6 @@ app.get('/', function (req, res) {
 });
 
 io.on('connection', (socket) => {
-  // io.emit('message', {"message": "connection", "deltaTime": 0});
   // MIDI INの信号を拾ったら実行する
   MIDI.input.on('message', (deltaTime, message) => {
     io.emit('message', {"message": message, "deltaTime": deltaTime});
