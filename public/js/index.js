@@ -13,7 +13,7 @@ $(function(){
       });
     });
     // ピッチベンド
-    $("#slider-vertical-pitch").slider({
+    $("#slider-pitch").slider({
       orientation: "horizontal",
       range: "min",
       min: 0,
@@ -33,9 +33,9 @@ $(function(){
         });
       }
     });
-    $("#amount-pitch").val($("#slider-vertical-pitch").slider("value"));
+    $("#amount-pitch").val($("#slider-pitch").slider("value"));
     // モジュレーション
-    $("#slider-vertical-modulation").slider({
+    $("#slider-modulation").slider({
       orientation: "horizontal",
       range: "min",
       min: 0,
@@ -55,7 +55,7 @@ $(function(){
         });
       }
     });
-    $("#amount-modulation").val($("#slider-vertical-modulation").slider("value"));
+    $("#amount-modulation").val($("#slider-modulation").slider("value"));
   // })
 });
 
