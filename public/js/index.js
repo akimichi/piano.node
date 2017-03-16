@@ -14,7 +14,7 @@ $(function(){
     });
     // ピッチベンド
     $("#slider-vertical-pitch").slider({
-      orientation: "vertical",
+      orientation: "horizontal",
       range: "min",
       min: 0,
       max: 127,
@@ -36,7 +36,7 @@ $(function(){
     $("#amount-pitch").val($("#slider-vertical-pitch").slider("value"));
     // モジュレーション
     $("#slider-vertical-modulation").slider({
-      orientation: "vertical",
+      orientation: "horizontal",
       range: "min",
       min: 0,
       max: 127,

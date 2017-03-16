@@ -9,11 +9,13 @@ a {
 
 
 #slider-vertical-pitch {
-  height:200px;
+  height:20px;
+  width:200px;
 }
 
 #slider-vertical-modulation {
-  height:200px;
+  height:20px;
+  width:200px;
 }
 
 
