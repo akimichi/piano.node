@@ -44,12 +44,12 @@ svg#keyboard {
 .white-key {
   fill:white;
   stroke:black;
-  width:5.75px;
-  height:30px;
+  width:11.5px;
+  height:60px;
 }
 .black-key {
   fill:black;
   stroke:black;
-  width:3.25px;
-  height:20px;
+  width:6.5px;
+  height:40px;
 }

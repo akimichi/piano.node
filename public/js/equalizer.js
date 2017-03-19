@@ -7,7 +7,7 @@ $(function(){
                           .attr('height',height)
                           .attr('weight',width)
     var status = parseInt(data.message[0]);
-    var note = 6.0 * parseInt(data.message[1]);
+    var note = parseInt(data.message[1]) - 8;
     console.log("note: " + data.message[1]);
     var velocity = (parseInt(data.message[2]) - 50) * 2;
     var deltaTime = parseFloat(data.deltaTime);
