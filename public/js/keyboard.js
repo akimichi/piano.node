@@ -4,7 +4,7 @@ $(function(){
 
   var svgKeyboard = d3.select('body svg#keyboard');
   // white keys 
-  for(white_i = 0; white_i < 2921; white_i = white_i + 23) {
+  for(white_i = 0; white_i < 730.25; white_i = white_i + 5.75) {
     svgKeyboard
         .append('rect')
         .attr('x',white_i)
@@ -12,30 +12,30 @@ $(function(){
         .attr('class', "white-key")
   }
   // black keys
-  for(black_i = 0; black_i < 2800; black_i = black_i + 161) {
+  for(black_i = 0; black_i < 700; black_i = black_i + 40.25) {
     svgKeyboard
         .append('rect')
-        .attr('x',14.33333 + black_i)
+        .attr('x',3.583325 + black_i)
         .attr('y', 0)
         .attr('class', "black-key")
     svgKeyboard
         .append('rect')
-        .attr('x',41.66666+black_i)
+        .attr('x',10.416665+black_i)
         .attr('y', 0)
         .attr('class', "black-key")
     svgKeyboard
         .append('rect')
-        .attr('x',82.25+black_i)
+        .attr('x',20.5625+black_i)
         .attr('y', 0)
         .attr('class', "black-key")
     svgKeyboard
         .append('rect')
-        .attr('x',108.25+black_i)
+        .attr('x',27.0625+black_i)
         .attr('y', 0)
         .attr('class', "black-key")
     svgKeyboard
         .append('rect')
-        .attr('x',134.75+black_i)
+        .attr('x',33.6875+black_i)
         .attr('y', 0)
         .attr('class', "black-key")
   }

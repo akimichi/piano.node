@@ -8,6 +8,10 @@ a {
 }
 
 
+#programs {
+  height:40px;
+  width:200px;
+}
 #slider-volume {
   height:20px;
   width:200px;
@@ -31,7 +35,7 @@ svg#equalizer {
 
 .sound-bar {
   fill:teal;
-  stroke:teal;
+//   stroke:teal;
 }
 svg#keyboard {
   height:150px;
@@ -40,12 +44,12 @@ svg#keyboard {
 .white-key {
   fill:white;
   stroke:black;
-  width:23px;
-  height:120px;
+  width:5.75px;
+  height:30px;
 }
 .black-key {
   fill:black;
   stroke:black;
-  width:13px;
-  height:80px;
+  width:3.25px;
+  height:20px;
 }
