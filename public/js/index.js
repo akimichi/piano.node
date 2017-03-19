@@ -62,7 +62,7 @@ $(function(){
       range: "min",
       min: 0,
       max: 127,
-      value: 0,
+      value: 64,
       slide: function( event, ui ) {
         $("#amount-volume").val( ui.value );
         $.ajax({
