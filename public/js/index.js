@@ -56,6 +56,24 @@ $(function(){
       }
     });
     $("#amount-modulation").val($("#slider-modulation").slider("value"));
+    // ボリューム
+    $("#slider-volume").slider({
+      orientation: "horizontal",
+      range: "min",
+      min: 0,
+      max: 127,
+      value: 0,
+      slide: function( event, ui ) {
+        $("#amount-volume").val( ui.value );
+        $.ajax({
+          type: 'POST',
+          data: JSON.stringify({volume_value: ui.value}),
+          contentType: 'application/json',
+          url: '/api/channel/voice/volume',						
+        });
+      }
+    });
+    $("#amount-volume").val($("#slider-volume").slider("value"));
   // })
 });
 

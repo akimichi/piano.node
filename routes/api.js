@@ -57,6 +57,13 @@ router.post('/channel/voice/modulation', (req, res) => {
   IO.run(MIDI.modulation_depth(1,req.body.modulation_value));
   res.redirect('/');
 });
+// Master volume 
+router.post('/channel/voice/volume', (req, res) => {
+  console.log('/channel/voice/volume');
+  console.log(req.body);
+  IO.run(MIDI.master_volume(1,req.body.volume_value));
+  res.redirect('/');
+});
 router.post('/channel/voice/control', (req, res) => {
   res.send('channel message');
 });

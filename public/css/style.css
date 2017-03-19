@@ -8,6 +8,11 @@ a {
 }
 
 
+#slider-volume {
+  height:20px;
+  width:200px;
+}
+
 #slider-pitch {
   height:20px;
   width:200px;
