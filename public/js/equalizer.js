@@ -69,6 +69,7 @@ $(function(){
         .attr('class', "sound-bar")
         .attr('width', 2)
         .attr('height', velocity)
+        .attr("fill", d3.rgb(velocity,0, 128 - velocity))
     }
     // noteOff
     if(status === 128){

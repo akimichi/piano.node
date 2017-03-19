@@ -30,12 +30,11 @@ a {
 
 svg#equalizer {
   height:150px;
-  width:3000px;
+  width:800px;
 }
 
 .sound-bar {
-  fill:teal;
-//   stroke:teal;
+  //height:128px;
 }
 svg#keyboard {
   height:150px;
