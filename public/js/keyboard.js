@@ -1,3 +1,4 @@
+// キーボードを描画する
 $(function(){
   var barPadding = '1';
 
@@ -38,28 +39,4 @@ $(function(){
         .attr('y', 0)
         .attr('class', "black-key")
   }
-
-  // var createSvg = (parent, height, width) => {
-  //   return d3.select(parent).append('svg').attr('height', height).attr('width', width);
-  // }
-  // var svg = d3.select('body')
-  //     .enter()
-  //     .append('svg')
-  //     .attr('height', svgHeight)
-  //     .attr('width', svgWidth);
-  
-  // var svg = d3.select('body svg#equalizer')
-  // var svg = d3.select("#equalizer")
-  //   .append("svg:svg")
-  //   .attr("width", 600)
-  //   .attr("height", 400)
-  //   .append("g")
-  //   .attr("transform", "translate(100, 100)")
-  //   .attr("class", "equalizer");
-  // svg.select('rect#keyboard')
-  //   .attr("x",50)
-  //   .attr("y",100)
-  //   .attr("width",900)
-  //   .attr("height",10)
-  //   .attr("fill","red");
 });

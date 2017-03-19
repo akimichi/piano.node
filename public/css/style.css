@@ -23,6 +23,11 @@ svg#equalizer {
   height:150px;
   width:3000px;
 }
+
+.sound-bar {
+  fill:teal;
+  stroke:teal;
+}
 svg#keyboard {
   height:150px;
   width:3000px;
