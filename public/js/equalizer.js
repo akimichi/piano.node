@@ -53,7 +53,7 @@ $(function(){
     var note = keyToPosition(key) + 2;
     // var note = key - 8;
     console.log("note: " + data.message[1]);
-    var velocity = parseInt(data.message[2]) * 2 - 50;
+    var velocity = parseInt(data.message[2]) * 1.4 - 30;
     console.log("velocity: " + velocity);
     var deltaTime = parseFloat(data.deltaTime);
 
@@ -67,9 +67,11 @@ $(function(){
         .attr('x',note)
         .attr('y', height - velocity) 
         .attr('class', "sound-bar")
-        .attr('width', 2)
+        .attr('width', 4)
         .attr('height', velocity)
-        .attr("fill", d3.rgb(velocity,0, 128 - velocity))
+        .attr("fill", d3.hsl(5 * velocity, 1,0.5 ))
+        // .attr("fill", d3.rgb(2 * velocity, note, 0))
+        // .attr("fill", d3.rgb(2 * (velocity - 30), note, 0, velocity - 80))
     }
     // noteOff
     if(status === 128){

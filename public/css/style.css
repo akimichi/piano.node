@@ -5,27 +5,50 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00B7FF0B
+}
+
+h1,h2 {
+ color: #5F4C0B;
+ text-align: center;
+}
+
+
+.menu {
+	overflow: hidden;
+  height:140px;
+}
+
+.box {
+  margin: 0px;
+	float: left;
 }
 
 
 #programs {
+  font-weight: bold;
+  font-size: medium;
+  margin: 10px;
+  padding: 4px;
   height:40px;
   width:200px;
 }
-#slider-volume {
-  height:20px;
-  width:200px;
-}
-
 #slider-pitch {
+  margin: 24px;
   height:20px;
   width:200px;
 }
 
 #slider-modulation {
+  margin: 24px;
   height:20px;
-  width:200px;
+  width:160px;
+}
+
+#slider-volume {
+  margin: 10px;
+  height:20px;
+  width:620px;
 }
 
 

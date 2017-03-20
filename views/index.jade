@@ -10,23 +10,26 @@ block append style
   link(rel='stylesheet', href='/css/style.css')
 
 block content
-  h2 音色 
-    br
-    form#submit_form(method="POST", action="/api/channel/voice/program/change")
-      select#programs
-        each program, i in programChange
-          option(value=i+1) #{programChange[i]}
-  h2 ボリューム 
-    #slider-volume
+  .menu
+    .box
+      h2 音色 
+        br
+        form#submit_form(method="POST", action="/api/channel/voice/program/change")
+          select#programs
+            each program, i in programChange
+              option(value=i+1) #{programChange[i]}
+    .box
+      h2 ピッチ 
+        #slider-pitch
 
-  h2 ピッチ 
-    #slider-pitch
-
-  h2 モジュレーション 
-    #slider-modulation
+    .box
+      h2 モジュレーション 
+        #slider-modulation
+  .menu
+    .box
+      h2 ボリューム 
+        #slider-volume
 
   svg#equalizer
   svg#keyboard
 
-  h2 デバッグメッセージ
-    #message
