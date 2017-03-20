@@ -42,7 +42,7 @@ $(function(){
     }
     return (octave - 1) * 7 * 11.5 + offset;
   };
-  socket.on('message', function(data){
+  socket.on('message', (data) => {
     var height = 150;
     var width = 3000;
     var svgEqualizer = d3.select('body svg#equalizer')
