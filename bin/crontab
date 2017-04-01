@@ -1,0 +1,10 @@
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+# MAILTO="akimichi.tatsukawa@gmail.com"
+HOME=/home/emile/projects/piano.node
+# AWS settings
+# AWS_CONFIG_FILE=/home/emile/.aws/config 
+
+@reboot sh bin/autostart.sh > log/cron.log 2>&1
+# @reboot sh /home/emile/projects/piano.node/bin/autostart.sh >/home/emile/projects/piano/log/cronlog 2>&1
+

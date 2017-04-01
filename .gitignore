@@ -1,6 +1,7 @@
 *~
 Session.vim
 node_modules/
+log/
 *.log
 
 
